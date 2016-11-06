@@ -3,24 +3,41 @@ export const places = [
     id: "abc123",
     name: "Casa Cappuccino",
     location: "91 Dunlop Street E",
-    amenities: {
-      wifi: true,
-    }
+    imgSrc: "img/casa.jpg"
   },
   {
     id: "123abc",
     name: "Flying Monkeys",
     location: "107 Dunlop Street E",
-    amenities: {
-      wifi: true
-    }
+    imgSrc: "img/casa.jpg"
   }
 ]
 
 export const hours = [
-  {business_id: "abc123", hours: {mon: "7-10", tues: "7-10", wed: "7-10", thur: "7-10", fri: "7-10", sat: "7-10", sun: "7-10"}},
-  {business_id: "123abc", hours: {mon: "11-7", tues: "11-7", wed: "11-7", thur: "11-7", fri: "11-9", sat: "11-9", sun: "11-6"}}
-]
+  {business_id: "abc123", hours: ['Mon: 7-10', 'Tues: 7-10', 'Wed: 7-10', 'Thurs: 7-10', 'Fri: 7-10', 'Sat: 7-10', 'Sun: 7-10']},
+  {business_id: "123abc", hours: ['Mon: 11-7', 'Tues: 11-7', 'Wed: 11-7', 'Thurs: 11-7', 'Fri: 11-9', 'Sat: 11-9', 'Sun: 11-6']}
+ ]
+//
+// export const hours = [
+//   {business_id: "abc123", hours: [
+//     {day: "Mon", hours: "7-10"},
+//     {day: "Tues", hours: "7-10"},
+//     {day: "Wed", hours: "7-10"},
+//     {day: "Thurs", hours: "7-10"},
+//     {day: "Fri", hours: "7-10"},
+//     {day: "Sat", hours: "7-10"},
+//     {day: "Sun", hours: "7-10"}
+//   ]},
+//   {business_id: "123abc", hours: [
+//     {day: "Mon", hours: "11-7"},
+//     {day: "Tues", hours: "11-7"},
+//     {day: "Wed", hours: "11-7"},
+//     {day: "Thurs", hours: "11-7"},
+//     {day: "Fri", hours: "11-9"},
+//     {day: "Sat", hours: "11-9"},
+//     {day: "Sun", hours: "11-6"}
+//   ]}
+// ]
 
 export const events = [
   {business_id: "abc123", date: "November 29th", time: "20:00", type: "Comedy", description: "A local comedian named Brian will be making your day better with hilarious comedy about todays common issues."},

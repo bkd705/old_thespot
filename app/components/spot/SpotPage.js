@@ -1,15 +1,14 @@
 import React from 'react'
-import SinglePlace from './SinglePlace'
+import SingleSpot from './SingleSpot'
 import { places } from '../../data/data'
 
-class PlacePage extends React.Component {
+class SpotPage extends React.Component {
   render(){
     const single = places.map((business, key) => {
-      return <SinglePlace place={business} key={key} />
+      return <SingleSpot spot={business} key={key} />
     })
     return(
       <div className="container">
-        <h2>Places</h2>
         <div className="row">
           {single}
         </div>
@@ -18,4 +17,4 @@ class PlacePage extends React.Component {
   }
 }
 
-export default PlacePage;
+export default SpotPage;
