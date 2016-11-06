@@ -1,23 +1,16 @@
 # The Spot App
 # Client Side
+# Front-End Prod branch
 
-## Dev Setup
-Setting up the dev environment is aids because it is react, but since most of it is done, all you have to do is a few steps!
+This branch is not to be updated or pushed or pull requested to. This is __ONLY__ for production ready front-end code. Push all front-end changes to _front-end-dev_ branch.
 
-1. npm/yarn Install
-2. npm/yarn Install --dev (you might not have to do this idk)
+# Full Prod App
 
-That is all, now on to.. drumroll please...
-
-## Running Dev environment
-Now running the dev environment is super simple since this is just the client side.
-
-1. npm/yarn start
-
-Boom done, now locate your browser to http://localhost:3000 and you are golden and live.
+Setup will change as we go so I don't feel like adding shit now.
+This is for the full app with client and server sides merged.
 
 ## Contributing Guidelines
-__NEVER__ contribute to either the __FrontEnd__ or __BackEnd__ branch, only commit to the branches with _-dev_ suffix.
+__NEVER__ contribute to either the __front-end__ or __back-end__ branch, only commit to the branches with _-dev_ suffix.
 
 Obviously the usual shit applies,
 1. Fork the repo
