@@ -1,5 +1,8 @@
 # The Spot App
 # Client Side
+# Front-End Prod branch
+
+This branch is not to be updated or pushed or pull requested to. This is __ONLY__ for production ready front-end code. Push all front-end changes to _front-end-dev_ branch.
 
 ## Dev Setup
 Setting up the dev environment is aids because it is react, but since most of it is done, all you have to do is a few steps!
