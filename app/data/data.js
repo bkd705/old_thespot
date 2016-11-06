@@ -1,14 +1,26 @@
 export const places = [
   {
     id: "abc123",
-    name: "Casa Cappuccino",
-    location: "91 Dunlop Street E",
+    name: 'Casa Cappuccino',
+    phoneNumber: '1(705)555-5555',
+    address: '90 Dunlop Street E',
+    city: 'Barrie',
+    province: 'Ontario',
+    postalCode: 'L6L-6L6',
+    features: ['Hot Drinks', 'Large Tables', 'Wifi', 'Open Concept'],
+    featured: false,
     imgSrc: "img/casa.jpg"
   },
   {
     id: "123abc",
-    name: "Flying Monkeys",
-    location: "107 Dunlop Street E",
+    name: 'Kings Arms',
+    phoneNumber: '1(905)905-9055',
+    address: '1 Lakeshre Rd East',
+    city: 'Oakville',
+    province: 'Ontario',
+    postalCode: 'L6L-6L6',
+    features: ['Bar', 'Occassional Band', 'Pool Table', 'Patio'],
+    featured: false,
     imgSrc: "img/casa.jpg"
   }
 ]
