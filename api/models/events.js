@@ -5,10 +5,10 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var eventSchema = new Schema({
-  businessId: {
+  spotId: {
     type: String,
     required: true
-  }
+  },
   title: {
     type: String,
     required: true
@@ -20,17 +20,14 @@ var eventSchema = new Schema({
   cost: {
     type: Number,
     required: true
-  }
+  },
   date: {
     type: String,
     required: true
   }
 
-
-
-
 });
 
-var Place = mongoose.model('placeSchema', placeSchema);
+var Event = mongoose.model('eventSchema', eventSchema);
 
-module.exports = Place;
+module.exports = Event;
