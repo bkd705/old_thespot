@@ -17,7 +17,7 @@ Now running the dev environment is super simple since this is just the client si
 Boom done, now locate your browser to http://localhost:3000 and you are golden and live.
 
 ## Contributing Guidelines
-__NEVER__ contribute to either the __FrontEnd__ or __BackEnd__ branch, only commit to the branches with _-dev_ suffix.
+__NEVER__ contribute to either the __front-end__ or __back-end__ branch, only commit to the branches with _-dev_ suffix.
 
 Obviously the usual shit applies,
 1. Fork the repo
