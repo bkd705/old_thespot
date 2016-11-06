@@ -19,15 +19,41 @@ export const places = [
     city: 'Oakville',
     province: 'Ontario',
     postalCode: 'L6L-6L6',
-    features: ['Bar', 'Occassional Band', 'Pool Table', 'Patio'],
+    features: ['Bar', 'Occassional Band', 'Pool Table', 'Patio', 'Alcohol'],
     featured: false,
-    imgSrc: "img/casa.jpg"
+    imgSrc: "img/kingsarms.jpg"
+  },
+  {
+    id: "abbc12",
+    name: 'Flying Monkeys',
+    phoneNumber: '1(905)905-9055',
+    address: '79 Dunlop Street E',
+    city: 'Barrie',
+    province: 'Ontario',
+    postalCode: 'L6L-6L6',
+    features: ['Bar', 'Alcohol', 'Pool Table', 'Patio', 'Craft Beer'],
+    featured: false,
+    imgSrc: "img/flyingmonkeys.jpg"
+  },
+  {
+    id: "abcc11",
+    name: 'Boon Burger',
+    phoneNumber: '1(905)905-9055',
+    address: '102 Dunlop Street E',
+    city: 'Barrie',
+    province: 'Ontario',
+    postalCode: 'L6L-6L6',
+    features: ['Vegetarian', 'Burgers', 'Wifi'],
+    featured: false,
+    imgSrc: "img/boonburger.jpg"
   }
 ]
 
 export const hours = [
   {business_id: "abc123", hours: ['Mon: 7-10', 'Tues: 7-10', 'Wed: 7-10', 'Thurs: 7-10', 'Fri: 7-10', 'Sat: 7-10', 'Sun: 7-10']},
-  {business_id: "123abc", hours: ['Mon: 11-7', 'Tues: 11-7', 'Wed: 11-7', 'Thurs: 11-7', 'Fri: 11-9', 'Sat: 11-9', 'Sun: 11-6']}
+  {business_id: "123abc", hours: ['Mon: 12-9', 'Tues: 12-9', 'Wed: 12-9', 'Thurs: 12-9', 'Fri: 12-12', 'Sat: 12-12', 'Sun: CLOSED']},
+  {business_id: "abbc12", hours: ['Mon: 11-7', 'Tues: 11-7', 'Wed: 11-7', 'Thurs: 11-7', 'Fri: 11-9', 'Sat: 11-9', 'Sun: 11-6']},
+  {business_id: "abcc11", hours: ['Mon: 7-10', 'Tues: 7-10', 'Wed: 7-10', 'Thurs: 7-10', 'Fri: 7-10', 'Sat: 7-10', 'Sun: 7-10']}
  ]
 //
 // export const hours = [
