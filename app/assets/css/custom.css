@@ -4,7 +4,6 @@ body {
   font-size: 16px;
   /* REMOVE THIS ON PRODUCTION, JUST A PLACEHOLDER FOR ADDING SPACE TO BOTTOM OF PAGE */
   padding-bottom: 50px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 *, *:before, *:after {
@@ -177,6 +176,12 @@ body {
 
 .spot {
   margin-top: 50px;
+  transition: all 500ms ease-in-out;
+}
+
+.spot:hover{
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 .spot:nth-of-type(1), .spot:nth-of-type(2), .spot:nth-of-type(3) {
