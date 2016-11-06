@@ -78,12 +78,6 @@ export const hours = [
 // ]
 
 export const events = [
-  {business_id: "abc123", date: "November 29th", time: "20:00", type: "Comedy", description: "A local comedian named Brian will be making your day better with hilarious comedy about todays common issues."},
-  {business_id: "123abc", date: "November 18th", time: "22:00", type: "Band", description: "Local band 'Trendsetter' will be performing their new album, entry is $5 with drinks on sale all night."}
-]
-
-export const reviews = [
-  {business_id: "abc123", author: "Sandy", description: "Casa Cappuccino is a wonderful place with a very nice vibe. You can work quietly while enjoying a wonderfully made pumpkin spice late! Would definitely recommend to my friends and to you!"},
-  {business_id: "abc123", author: "Carry", description: "Casa Cappuccino is my go to place to get work done. I get to enjoy a perfect latte while having a nice quiet environment to complete my work in!"},
-  {business_id: "123abc", author: "Larry", description: "Flying monkeys in downtown Barrie really is a decent place to go and get a quick bite to eat, and maybe sit down for some of their top notch wifi!"}
+  {business_id: "abc123", month: "Nov.", day: "06", time: "20:00", type: "Comedy", title: "Brian Smith - Laugh Away", description: "A local comedian named Brian will be making your day better with hilarious comedy about todays common issues."},
+  {business_id: "abc123", month: "Nov.", day: "13", time: "22:00", type: "Band", title: "Trendsetters Unite", description: "Local band 'Trendsetter' will be performing their new album, entry is $5 with drinks on sale all night."}
 ]

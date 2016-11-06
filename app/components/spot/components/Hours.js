@@ -6,7 +6,6 @@ class Hours extends React.Component {
   render(){
     const hourList = hours.map((spot, key) => {
       let element;
-      console.log(this.props.id);
       if(spot.business_id == this.props.id) {
         return (
           <span key={key}>

@@ -6,18 +6,20 @@ class Events extends React.Component {
     const event = events.map((event, key) => {
       if(event.business_id == this.props.id) {
         return (
-          <div className="single-event">
-            <p>Date: {event.date} at <em>{event.time}</em></p>
-            <p>Event Type: {event.type}</p>
-            <p>{event.description}</p>
-          </div>
+            <li className="events__item">
+              <span className="events__date-container"><span className="date--month">{event.month}</span><span className="date--number">{event.day}</span></span>
+              <div className="event__details">
+                <p className="event__name">{event.title}</p>
+                <p className="event__desc">{event.description}</p>
+              </div>
+            </li>
         )
       }
     })
     return(
-      <div className="place-event">
+      <ul className="events__list">
         {event}
-      </div>
+      </ul>
     )
   }
 }
