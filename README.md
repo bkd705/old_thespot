@@ -1,20 +1,8 @@
 # The Spot App
-# Client Side
+# Full Prod App
 
-## Dev Setup
-Setting up the dev environment is aids because it is react, but since most of it is done, all you have to do is a few steps!
-
-1. npm/yarn Install
-2. npm/yarn Install --dev (you might not have to do this idk)
-
-That is all, now on to.. drumroll please...
-
-## Running Dev environment
-Now running the dev environment is super simple since this is just the client side.
-
-1. npm/yarn start
-
-Boom done, now locate your browser to http://localhost:3000 and you are golden and live.
+Setup will change as we go so I don't feel like adding shit now.
+This is for the full app with client and server sides merged.
 
 ## Contributing Guidelines
 __NEVER__ contribute to either the __front-end__ or __back-end__ branch, only commit to the branches with _-dev_ suffix.
