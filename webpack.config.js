@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 let HtmlWebPackPlugin = require('html-webpack-plugin')
 let HTMLWebpackPluginConfig = new HtmlWebPackPlugin({
@@ -24,6 +25,9 @@ module.exports = {
   plugins: [
     HTMLWebpackPluginConfig,
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoErrorsPlugin()
+    new webpack.NoErrorsPlugin(),
+    new CopyWebpackPlugin([
+            { from: 'app/assets' }
+        ])
   ]
 }
