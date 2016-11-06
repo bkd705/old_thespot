@@ -1,4 +1,9 @@
 # The Spot App
+# Client Side
+# Front-End Prod branch
+
+This branch is not to be updated or pushed or pull requested to. This is __ONLY__ for production ready front-end code. Push all front-end changes to _front-end-dev_ branch.
+=======
 # Full Prod App
 
 Setup will change as we go so I don't feel like adding shit now.
