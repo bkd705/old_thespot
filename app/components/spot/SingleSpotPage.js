@@ -26,7 +26,6 @@ class SingleSpotPage extends React.Component {
             <h6>Features</h6>
             <Features id={spotId} data={spot.features} />
           </section>
-
           <section className="spot__events grid-half">
             <h6>Upcoming Events</h6>
             <Events id={spotId} />
