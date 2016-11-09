@@ -6,7 +6,7 @@ class Events extends React.Component {
     const event = events.map((event, key) => {
       if(event.business_id == this.props.id) {
         return (
-            <li className="events__item">
+            <li className="events__item" key={key}>
               <span className="events__date-container"><span className="date--month">{event.month}</span><span className="date--number">{event.day}</span></span>
               <div className="event__details">
                 <p className="event__name">{event.title}</p>

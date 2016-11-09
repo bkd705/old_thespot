@@ -49,6 +49,8 @@ export const places = [
   }
 ]
 
+export const tags = ['Wifi', 'Patio', 'Alcohol']
+
 export const hours = [
   {business_id: "abc123", hours: ['Mon: 7-10', 'Tues: 7-10', 'Wed: 7-10', 'Thurs: 7-10', 'Fri: 7-10', 'Sat: 7-10', 'Sun: 7-10']},
   {business_id: "123abc", hours: ['Mon: 12-9', 'Tues: 12-9', 'Wed: 12-9', 'Thurs: 12-9', 'Fri: 12-12', 'Sat: 12-12', 'Sun: CLOSED']},

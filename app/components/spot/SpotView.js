@@ -6,7 +6,7 @@ import Events from './components/Events'
 
 import { places } from '../../data/data'
 
-class SingleSpotPage extends React.Component {
+class SpotView extends React.Component {
   render(){
     const { spotId } = this.props.params;
     const i = places.findIndex(spot => spot.id === spotId)
@@ -37,4 +37,4 @@ class SingleSpotPage extends React.Component {
   }
 }
 
-export default SingleSpotPage
+export default SpotView

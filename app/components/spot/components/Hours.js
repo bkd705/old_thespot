@@ -4,19 +4,13 @@ import { hours } from '../../../data/data'
 
 class Hours extends React.Component {
   render(){
-    const hourList = hours.map((spot, key) => {
+    const hourList = hours.map(spot => {
       let element;
       if(spot.business_id == this.props.id) {
         return (
-          <span key={key}>
-            <li>{spot.hours[0]}</li>
-            <li>{spot.hours[1]}</li>
-            <li>{spot.hours[2]}</li>
-            <li>{spot.hours[3]}</li>
-            <li>{spot.hours[4]}</li>
-            <li>{spot.hours[5]}</li>
-            <li>{spot.hours[6]}</li>
-          </span>
+          spot.hours.map((day,key) => {
+            return <li key={key}>{day}</li>
+          })
         )
       }
       return element
