@@ -13,10 +13,11 @@ var spotSchema = new Schema({
   },
   phoneNumber: {
     type: String,
+    unique: true
   },
   address: {
     type: String,
-    required: true,
+    required: true
   },
   city: {
     type: String,
