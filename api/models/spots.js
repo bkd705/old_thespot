@@ -38,8 +38,7 @@ var spotSchema = new Schema({
   featured: {
     type: Boolean,
     required: true
-  },
-  events: []
+  }
 });
 
 var Spot = mongoose.model('spotSchema', spotSchema);

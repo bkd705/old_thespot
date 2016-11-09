@@ -58,33 +58,17 @@ router.post('/create', function(req, res) {
 /* PUT REQUEST - Update Spot */
 router.put('/update', function(req, res) {
     var __spot = req.body;
-    Spot.findOne({
-            "_id": __spot._id
-        })
-        .then(function(spot) {
-            console.log(__spot);
-
             //update spot with new changes
             Spot.update({
-                '_id': spot._id
-            },
-            {
-                name: __spot.name,
-                phoneNumber: __spot.phoneNumber,
-                address: __spot.address,
-                city: __spot.city,
-                province: __spot.province,
-                postalCode: __spot.postalCode,
-                features: __spot.features,
-                featured: __spot.featured
-            },function(err) {
+                '_id': __spot._id
+            },__spot,function(err) {
                 if (err) {
                     console.log(err);
                     if (err.name === 'MongoError' && err.code === 11000) {
                         // Duplicate spot error
                         return res.status(500).send({
                             succes: false,
-                            message: 'Spot already exists!'
+                            message: 'Spot ID already exists!'
                         });
                     }
                     // Some other error
@@ -96,23 +80,16 @@ router.put('/update', function(req, res) {
                     console.log(__spot.name + ' Updated!');
                 }
             });
-        });
+
 });
 //END OF PUT
 
 /* DELETE REQUEST - Delete Spot */
-router.delete('/delete', function(req,res){
-    var __spot = req.body;
-
-    Spot.remove({_id:__spot._id},function(err){
-        if(err){
-            console.log(err);
-            return res.status(500).send(err);
-        }else{
-            res.send({
-                message: __spot.name + " Deleted Successfully"
-            })
-        }
+router.delete('/delete/:id', function(req,res){
+    Spot.remove({"_id":req.params.id}, function(err){
+        err ? console.log(err) : res.send({
+            message: 'Spot deleted successfully'
+        });
     })
 });
 
