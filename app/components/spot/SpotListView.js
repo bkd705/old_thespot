@@ -32,14 +32,16 @@ class SpotListView extends React.Component {
     queryText = queryText.toLowerCase()
     this.state.spots.forEach(spot => {
       if(spot.name.toLowerCase().indexOf(queryText) != -1) {
-        queryResult.push(spot)
+        let found = queryResult.some(a => { return a.name === spot.name })
+        if(!found) { queryResult.push(spot) }
       }
     })
 
     this.state.spots.forEach(spot => {
       spot.features.forEach(ft => {
         if(ft.toLowerCase().indexOf(queryText) != -1){
-          queryResult.push(spot)
+          let found = queryResult.some(a => { return a.name === spot.name })
+          if(!found) { queryResult.push(spot) }
         }
       })
     })
