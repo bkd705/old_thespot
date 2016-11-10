@@ -62,9 +62,7 @@ class SpotListView extends React.Component {
     return(
       <div className="container">
         <Search query={this.state.query} doSearch={this.doSearch.bind(this)} />
-        <div className="row">
-          <SpotListItem spots={this.state.filteredSpots}/>
-        </div>
+        <SpotListItem spots={this.state.filteredSpots}/>
       </div>
     );
   }

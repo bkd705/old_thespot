@@ -9,7 +9,7 @@ export const places = [
     postalCode: 'L6L-6L6',
     features: ['Hot Drinks', 'Large Tables', 'Wifi', 'Open Concept'],
     featured: false,
-    imgSrc: "img/casa.jpg"
+    imgSrc: "assets/img/casa.jpg"
   },
   {
     id: "123abc",
@@ -21,7 +21,7 @@ export const places = [
     postalCode: 'L6L-6L6',
     features: ['Bar', 'Occassional Band', 'Pool Table', 'Patio', 'Alcohol'],
     featured: false,
-    imgSrc: "img/kingsarms.jpg"
+    imgSrc: "assets/img/kingsarms.jpg"
   },
   {
     id: "abbc12",
@@ -33,7 +33,7 @@ export const places = [
     postalCode: 'L6L-6L6',
     features: ['Bar', 'Alcohol', 'Pool Table', 'Patio', 'Craft Beer'],
     featured: false,
-    imgSrc: "img/flyingmonkeys.jpg"
+    imgSrc: "assets/img/flyingmonkeys.jpg"
   },
   {
     id: "abcc11",
@@ -45,7 +45,7 @@ export const places = [
     postalCode: 'L6L-6L6',
     features: ['Vegetarian', 'Burgers', 'Wifi'],
     featured: false,
-    imgSrc: "img/boonburger.jpg"
+    imgSrc: "assets/img/boonburger.jpg"
   }
 ]
 

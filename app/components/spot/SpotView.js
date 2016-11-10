@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 import Hours from './components/Hours'
 import Features from './components/Features'
@@ -15,7 +16,7 @@ class SpotView extends React.Component {
       <div className="wrapper">
         <section className="featured__large">
           <div className="featured__desc">
-            <h3>{spot.name}</h3>
+            <h3 onClick={this.testFunc}>{spot.name}</h3>
             <p>Flying Monkeys craft brewery in the downtown core of Barrie is a hotspot for craft beer enthusiasts. With great food, wifi and of course beer, this place is the perfect spot for you and your friends to hangout!</p>
           </div>
         </section>

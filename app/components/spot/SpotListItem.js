@@ -26,9 +26,9 @@ class SpotListItem extends React.Component {
       )
     })
     return(
-      <span>
-        {item}
-      </span>
+      <div className="row">
+      {item}
+      </div>
     );
   }
 }

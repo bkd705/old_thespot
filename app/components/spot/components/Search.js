@@ -8,6 +8,7 @@ class Search extends React.Component {
 
     this.addTagFilter = this.addTagFilter.bind(this)
   }
+  
   doSearch() {
     let query = this.refs.searchInput.value;
     this.props.doSearch(query);
@@ -26,7 +27,7 @@ class Search extends React.Component {
       <div className="search">
         <input type="text" className="search__input" ref="searchInput" name='filter' onChange={this.doSearch.bind(this)} placeholder="Search Spots..." />
         <section className="search__filter">
-          <h5>Search By Filters:</h5>
+          <h5>Popular Tags:</h5>
           <ul>
             {taglist}
           </ul>
