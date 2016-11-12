@@ -19,6 +19,8 @@ router.get('/all', function(req, res) {
     });
 }); //END OF GET
 
+
+
 /** POST REQUEST - Create New Spot **/
 router.post('/create', function(req, res) {
         //create spot from data sent
@@ -39,7 +41,7 @@ router.post('/create', function(req, res) {
                 if (err.name === 'MongoError' && err.code === 11000) {
                     // Duplicate spot error
                     return res.status(500).send({
-                        succes: false,
+                        success: false,
                         message: 'Spot already exists!'
                     });
                 }

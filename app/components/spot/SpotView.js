@@ -1,17 +1,52 @@
 import React from 'react'
-import axios from 'axios'
+import { connect } from 'react-redux'
+import { addFlashMessage } from '../../actions/flashMessages'
+import { deleteSpot } from '../../actions/spotActions'
 
 import Hours from './components/Hours'
 import Features from './components/Features'
 import Events from './components/Events'
 
-import { places } from '../../data/data'
-
 class SpotView extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      spotId: ''
+    }
+
+    this.onClick = this.onClick.bind(this)
+  }
+
+  componentDidMount() {
+    const { spotId } = this.props.params
+    if(this.state.spotId == '') {
+      this.state.spotId = spotId
+    }
+  }
+
+  onClick() {
+    this.props.deleteSpot(this.state.spotId).then(res => {
+      console.log(res)
+      if(res.data.message) {
+        this.props.addFlashMessage({
+          type: 'success',
+          text: res.data.message
+        })
+        this.context.router.push('/')
+      } else {
+        this.props.addFlashMessage({
+          type: 'error',
+          text: 'An error occurred, please try again!'
+        })
+      }
+    })
+  }
+
   render(){
     const { spotId } = this.props.params;
-    const i = places.findIndex(spot => spot.id === spotId)
-    const spot = places[i];
+    const i = this.props.spots.findIndex(spot => spot._id === spotId)
+    const spot = this.props.spots[i];
     return(
       <div className="wrapper">
         <section className="featured__large">
@@ -32,10 +67,20 @@ class SpotView extends React.Component {
             <Events id={spotId} />
           </section>
         </div>
-
+        <button className="btn btn-danger" onClick={this.onClick}>Delete Spot</button>
       </div>
     )
   }
 }
 
-export default SpotView
+SpotView.contextTypes = {
+  router: React.PropTypes.object.isRequired
+}
+
+function mapStateToProps(state) {
+  return {
+    spots: state.spots
+  }
+}
+
+export default connect(mapStateToProps, { deleteSpot, addFlashMessage })(SpotView)

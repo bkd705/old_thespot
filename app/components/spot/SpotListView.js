@@ -1,29 +1,30 @@
 import React from 'react'
 import SpotListItem from './SpotListItem'
 import Search from './components/Search'
-
-import { places } from '../../data/data'
-
+import { connect } from 'react-redux'
+import { getSpots } from '../../actions/spotActions'
+import store from '../../store'
 
 class SpotListView extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       query: '',
-      spots: places,
-      filteredSpots: places
+      spots: [],
+      filteredSpots: []
     };
   }
 
-  checkExists(arr, name) {
-    console.log('check')
-    for(let i=0; i < arr.length; i++) {
-      if (arr[i].name == name) {
-        console.log('exists')
-        return false;
-      } else {
-        return true;
-      }
+  componentDidMount() {
+    this.props.getSpots();
+  }
+
+  componentDidUpdate() {
+    if(this.state.spots.length != this.props.spots.length){
+      this.setState({
+        spots: this.props.spots,
+        filteredSpots: this.props.spots
+      })
     }
   }
 
@@ -38,7 +39,7 @@ class SpotListView extends React.Component {
     })
 
     this.state.spots.forEach(spot => {
-      spot.features.forEach(ft => {
+      spot.features.split(',').forEach(ft => {
         if(ft.toLowerCase().indexOf(queryText) != -1){
           let found = queryResult.some(a => { return a.name === spot.name })
           if(!found) { queryResult.push(spot) }
@@ -47,7 +48,7 @@ class SpotListView extends React.Component {
     })
 
     if(queryText == '') {
-      queryResult = places
+      queryResult = this.state.spots
     }
 
     this.setState({
@@ -56,11 +57,8 @@ class SpotListView extends React.Component {
     })
   }
   render(){
-    // const single = places.map((business, key) => {
-    //   return <SpotListItem spot={business} key={key} />
-    // })
     return(
-      <div className="container">
+      <div>
         <Search query={this.state.query} doSearch={this.doSearch.bind(this)} />
         <SpotListItem spots={this.state.filteredSpots}/>
       </div>
@@ -68,4 +66,15 @@ class SpotListView extends React.Component {
   }
 }
 
-export default SpotListView;
+SpotListView.propTypes = {
+  getSpots: React.PropTypes.func.isRequired
+}
+
+function mapStateToProps(state) {
+  return {
+    spots: state.spots,
+    filteredSpots: state.spots
+  }
+}
+
+export default connect(mapStateToProps, { getSpots })(SpotListView);
