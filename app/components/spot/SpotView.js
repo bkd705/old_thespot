@@ -47,12 +47,18 @@ class SpotView extends React.Component {
     const { spotId } = this.props.params;
     const i = this.props.spots.findIndex(spot => spot._id === spotId)
     const spot = this.props.spots[i];
+    const ftlist = spot.features.split(',');
+    const style = {
+      background: `url('../assets/img/large/${spot.name.toLowerCase().split(' ').join('')}large.jpg') no-repeat`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center'
+    }
     return(
       <div className="wrapper">
-        <section className="featured__large">
+        <section className="featured__large" style={style}>
           <div className="featured__desc">
-            <h3 onClick={this.testFunc}>{spot.name}</h3>
-            <p>Flying Monkeys craft brewery in the downtown core of Barrie is a hotspot for craft beer enthusiasts. With great food, wifi and of course beer, this place is the perfect spot for you and your friends to hangout!</p>
+            <h3>{spot.name}</h3>
+            <p>With {ftlist[0]}, {ftlist[1]} and more, {spot.name} is the perfect place for you and your friends to hangout!</p>
           </div>
         </section>
         <div className="row">
