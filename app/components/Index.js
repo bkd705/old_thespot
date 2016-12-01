@@ -1,16 +1,12 @@
 import React from 'react'
 
-import Featured from './spot/components/Featured'
-import Search from './search/Search'
-import SpotPage from './spot/SpotPage'
+import SpotListView from './spot/list/SpotListView'
 
 class Index extends React.Component {
   render(){
     return(
       <div className="wrapper">
-        <Featured />
-        <Search />
-        <SpotPage />
+        <SpotListView />
       </div>
     );
   }
