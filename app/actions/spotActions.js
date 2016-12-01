@@ -1,10 +1,17 @@
 import axios from 'axios'
-import { SET_DEFAULT_SPOTS } from './types'
+import { SET_DEFAULT_SPOTS, REMOVE_SPOT } from './types'
 
 export function setDefaultSpots(spots) {
   return {
     type: SET_DEFAULT_SPOTS,
     spots
+  }
+}
+
+export function removeSpot(id) {
+  return {
+    type: REMOVE_SPOT,
+    id
   }
 }
 
@@ -24,6 +31,7 @@ export function addSpot(spot) {
 
 export function deleteSpot(id) {
   return dispatch => {
+    dispatch(removeSpot(id))
     return axios.delete(`/spots/delete/${id}`);
   }
 }

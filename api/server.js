@@ -30,11 +30,12 @@ app.use(webpackHotMiddleware(compiler, {
 }))
 
 //Database
-mongoose.connect('mongodb://localhost/data/db/');
+// mongoose.connect('mongodb://localhost/data/db/'); //local db
+mongoose.connect('mongodb://admin:admin@ds163387.mlab.com:63387/thespot'); // mlab connection
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
-    console.log("Connected to db at /data/db/");
+    console.log("Connected to db at /data/db/, or maybe mlab who knows");
 });
 
 

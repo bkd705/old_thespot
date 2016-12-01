@@ -6,6 +6,11 @@ import FlashMessagesList from './flash/FlashMessagesList'
 
 
 class App extends React.Component {
+
+  componentDidMount() {
+    this.props.getSpots();
+  }
+
   render() {
     return(
       <div>
@@ -19,4 +24,8 @@ class App extends React.Component {
   }
 }
 
-export default connect(null, { getSpots})(App)
+App.propTypes = {
+  getSpots: React.PropTypes.func.isRequired
+}
+
+export default connect(null, { getSpots })(App)

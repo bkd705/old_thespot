@@ -6,6 +6,7 @@
   "author": "Brennen Denomme <brennenkdenomme@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "start": "npm run server",
     "server": "nodemon --watch server --exec babel-node -- api/server.js"
   },
   "devDependencies": {
@@ -28,6 +29,7 @@
     "express": "^4.14.0",
     "lodash": "^4.16.6",
     "mongoose": "^4.6.6",
+    "nodemon": "^1.11.0",
     "react": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-redux": "^4.4.5",
@@ -36,6 +38,7 @@
     "redux-async-initial-state": "^0.2.0",
     "redux-thunk": "^2.1.0",
     "shortid": "^2.2.6",
-    "thunk": "^0.0.1"
+    "thunk": "^0.0.1",
+    "validator": "^6.2.0"
   }
 }

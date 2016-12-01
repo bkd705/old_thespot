@@ -6,11 +6,11 @@ class NavigationBar extends React.Component {
     return(
       <nav className="navbar">
           <ul className="navbar__list">
-            <li className="navbar__item"><Link to="/">Home</Link></li>
-            <li className="navbar__item"><Link to="/search">Search</Link></li>
+            <li className="navbar__item"></li>
+            <li className="navbar__item"></li>
             <li className="navbar__brand navbar__item"><Link to="/">The Spot</Link></li>
-            <li className="navbar__item"><Link to="/events/all">Events</Link></li>
-            <li className="navbar__item"><Link to="/spots">Spots</Link></li>
+            <li className="navbar__item"></li>
+            <li className="navbar__item"></li>
           </ul>
       </nav>
     )
