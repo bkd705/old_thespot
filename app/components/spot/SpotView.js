@@ -3,11 +3,6 @@ import Features from './components/Features'
 import Reviews from './components/Reviews'
 
 class SpotView extends React.Component {
-
-  componentWillMount() {
-    console.log('mounting')
-  }
-
   render(){
       const { spot } = this.props
       const features = spot.features.split(',');
