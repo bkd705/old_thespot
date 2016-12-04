@@ -7,7 +7,7 @@ import Features from './../components/Features'
 class SpotListItem extends React.Component {
   render(){
     const item = this.props.spots.map((spot, key) => {
-      const imgName = spot.name.toLowerCase().split(' ').join('')
+      const imgName = spot.name.toLowerCase().split(' ').join('').replace(/[^\w\s]/gi, '')
       return (
         <div className="grid-third spot" key={key}>
           <Link to={`/view/${spot._id}`}>
