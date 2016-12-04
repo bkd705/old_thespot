@@ -7,7 +7,7 @@ class SpotView extends React.Component {
       const { spot } = this.props
       const features = spot.features.split(',');
       const style = {
-        background: `url('../assets/img/large/${spot.name.toLowerCase().split(' ').join('')}large.jpg') no-repeat`,
+        background: `url('../assets/img/large/${spot.name.toLowerCase().split(' ').join('').replace(/[^\w\s]/gi, '')}large.jpg') no-repeat`,
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }
