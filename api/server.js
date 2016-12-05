@@ -47,6 +47,9 @@ app.use('/spots', spot_routes);
 var event_routes = require('./routes/event_routes.js');
 app.use('/events', event_routes);
 
+const review_routes = require('./routes/review_routes')
+app.use('/reviews', review_routes)
+
 app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'))
 })

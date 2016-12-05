@@ -27,7 +27,7 @@ router.get('/all', function(req, res) {
 /** GET REQUEST - Get all Events by spot ID **/
 router.get('/spot/:id', function(req, res) {
     Event.find({
-        'spotId': '58237a7830c9f66ecbe4ad74'
+        'spotId': '58237a7830c9f66ecbe4ad74' // Fix this, its hardcoded ayylmao
     }, function(err, events) {
         err ? console.log(err) : res.send({
             events
