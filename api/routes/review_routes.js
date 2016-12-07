@@ -6,6 +6,12 @@ const app = express(),
 
 const Review = require('../models/reviews')
 
+app.get('/all', (req, res) => {
+  Review.find({}, (err, reviews) => {
+    err ? console.log(err) : res.send({ reviews })
+  })
+})
+
 app.get('/:spotId', (req, res) => {
   const spotId = req.params.spotId
   Review.find({ "spotId": spotId }, (err, reviews) => {

@@ -193,6 +193,11 @@ body {
   text-decoration: none;
 }
 
+.page_ft .spot__features li {
+  display: block;
+  padding: 5px;
+}
+
 .spot__img, .spot__img img {
   width: 300px;
   height: 150px;
