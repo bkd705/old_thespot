@@ -61,7 +61,7 @@ class SpotContainer extends React.Component {
     })
   }
 
-  render(){
+  render() {
     const loading = (
       <p>Spot is loading...</p>
     )

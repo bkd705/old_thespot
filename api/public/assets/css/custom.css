@@ -336,3 +336,33 @@ body {
   width: 80%;
   color: rgba(0,0,0,0.7);
 }
+
+/*
+* REVIEWS
+*/
+
+.reviews-list {
+  margin: 0;
+  padding: 0;
+}
+
+.review-item li {
+  list-style: none;
+}
+
+.review-form {
+  display: none;
+}
+
+.review-visible {
+  display: block;
+}
+
+.hide-button {
+  display: none;
+}
+
+.form-horizontal .form-group {
+  max-width: 75%;
+  margin: 2px 0;
+}

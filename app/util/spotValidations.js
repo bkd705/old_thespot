@@ -3,7 +3,6 @@ import isEmpty from 'lodash/isEmpty'
 
 export function validateNewSpot(data) {
   let errors = {}
-  console.log('new spot validator')
 
   if(Validator.isEmpty(data.name)) {
     errors.name = 'Field cannot be empty!'

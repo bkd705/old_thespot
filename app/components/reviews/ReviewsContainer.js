@@ -1,6 +1,7 @@
 import React from 'react'
 import { getReviews } from '../../actions/reviewActions'
 import ReviewsList from './ReviewsList'
+import ReviewsForm from './ReviewsForm'
 import { connect } from 'react-redux'
 
 class ReviewsContainer extends React.Component {
@@ -21,12 +22,11 @@ class ReviewsContainer extends React.Component {
     })
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <div className="reviews-container">
-        <ul className="reviews">
-          <ReviewsList reviews={this.state.reviews} />
-        </ul>
+        <ReviewsList reviews={this.state.reviews} />
+        <ReviewsForm spotId={this.props.spotId}/>
       </div>
     )
   }

@@ -7,3 +7,11 @@ export function getReviews(spotId) {
     })
   }
 }
+
+export function addReview(review) {
+  return dispatch => {
+    return axios.post('/reviews/create', review).then(res => {
+      return res.data
+    })
+  }
+}
