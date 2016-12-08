@@ -4,6 +4,7 @@ import ReviewsContainer from '../reviews/ReviewsContainer'
 
 class SpotView extends React.Component {
   render(){
+    const apiKey = 'AIzaSyDo_Krv2uazBGRStApzLzVeHlyKFsfIQiM'
     const { spot } = this.props
     const features = spot.features.split(',');
     const style = {
@@ -12,6 +13,7 @@ class SpotView extends React.Component {
       backgroundPosition: 'center',
       width: '75%'
     }
+    const mapQuery = `${spot.address.replace(' ', '+')},${spot.city}+${spot.province}`
     return(
       <div className="wrapper">
         <section className="spot__description page_ft" style={{width: '25%', margin: 0, marginTop: '-25px', float: 'left'}}>
@@ -28,6 +30,16 @@ class SpotView extends React.Component {
           <section className="spot__events grid-half">
             <h6>Reviews</h6>
             <ReviewsContainer spotId={spot._id}/>
+          </section>
+          <section className="spot__events grid-half">
+            <h6>Map</h6>
+              <iframe
+                width="600"
+                height="450"
+                frameBorder="0" style={{border: 0}}
+                src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${mapQuery}`}
+                allowFullScreen>
+              </iframe>
           </section>
         </div>
       </div>
