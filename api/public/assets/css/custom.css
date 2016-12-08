@@ -136,6 +136,25 @@ body {
 * SEARCH
 */
 
+.search-delete {
+  position: absolute;
+  right: 115px;
+  top: 2px;
+  z-index: 999;
+  font-size: 24px;
+  font-weight: bold;
+  color: rbga(0,0,0,0.6);
+}
+
+.search-delete:hover {
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2)
+}
+
+.delete-hidden {
+  display: none;
+}
+
 .search {
   margin: 50px auto;
   width: 75%;
