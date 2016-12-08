@@ -46,6 +46,7 @@ class ReviewsForm extends React.Component {
 
     if(this.isValid()) {
       this.props.addReview(this.state).then(res => {
+        this.setState({ title: '', author: '', email: '', rating: 0, body: '', showForm: false })
         this.props.addFlashMessage({
           type: 'success',
           text: 'Review added successfully!'
@@ -97,13 +98,18 @@ class ReviewsForm extends React.Component {
             onChange={this.onChange}
           />
 
-          <TextFieldGroup
-            field="body"
-            label="Review"
-            value={body}
-            error={errors.body}
-            onChange={this.onChange}
-          />
+        <div style={{marginTop: '5px'}} className={classnames("form-group", { 'has-error': errors.body })}>
+          <label>Review</label>
+            <textarea
+              className="form-control"
+              name='body'
+              onChange={this.onChange}
+              value={body}
+              placeholder='Post Message'
+            >
+            </textarea>
+            {errors.body && <span className="help-block">{errors.body}</span>}
+          </div>
 
           <button type="submit" className="btn btn-primary">Add Review</button>
         </form>

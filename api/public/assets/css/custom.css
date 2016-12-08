@@ -210,6 +210,7 @@ body {
   top: 90px;
   left: 10px;
   font-size: 18px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.4);
 }
 
 .spot__address {
@@ -217,6 +218,7 @@ body {
   top: 118px;
   left: 10px;
   font-size: 12px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.4);
 }
 
 .spot h6 {

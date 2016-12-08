@@ -14,4 +14,8 @@ class Features extends React.Component {
   }
 }
 
+Features.propTypes = {
+  data: React.PropTypes.string.isRequired
+}
+
 export default Features

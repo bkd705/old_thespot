@@ -12,9 +12,11 @@ class SpotListItem extends React.Component {
         <div className="grid-third spot" key={key}>
           <Link to={`/view/${spot._id}`}>
             <div className="spot__img">
-              <img src={"assets/img/" + imgName + ".jpg"} alt={imgName} />
-              <p className="spot__name">{spot.name}</p>
-              <p className="spot__address">{spot.address}, {spot.city}</p>
+              <img src={`/assets/img/${imgName}.jpg`} alt={imgName} />
+              <div className="spot-details">
+                <p className="spot__name">{spot.name}</p>
+                <p className="spot__address">{spot.address}, {spot.city}</p>
+              </div>
             </div>
             <h6>Spot Features</h6>
               <Features data={spot.features}/>
@@ -28,6 +30,10 @@ class SpotListItem extends React.Component {
       </div>
     );
   }
+}
+
+SpotListItem.propTypes = {
+  spots: React.PropTypes.array.isRequired
 }
 
 export default SpotListItem

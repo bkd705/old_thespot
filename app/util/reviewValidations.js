@@ -22,7 +22,7 @@ export function validateReview(data) {
   if(!Validator.isEmail(data.email)) {
     errors.email = 'This is not a valid email!'
   }
-  if(!Validator.matches(data.rating, /^[0-9]{2}$/)) {
+  if(!Validator.matches(data.rating, /^[0-9]{1,2}$/)) {
     errors.rating = 'Please enter a valid number between 1-10'
   }
 

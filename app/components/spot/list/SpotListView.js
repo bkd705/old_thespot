@@ -44,7 +44,7 @@ class SpotListView extends React.Component {
     queryText = queryText.toLowerCase()
     this.state.spots.forEach(spot => {
       if(spot.name.toLowerCase().indexOf(queryText) != -1) {
-        let found = queryResult.some(a => { return a.name === spot.name })
+        const found = queryResult.some(a => { return a.name === spot.name })
         if(!found) { queryResult.push(spot) }
       }
     })
@@ -52,7 +52,7 @@ class SpotListView extends React.Component {
     this.state.spots.forEach(spot => {
       spot.features.split(',').forEach(ft => {
         if(ft.toLowerCase().indexOf(queryText) != -1){
-          let found = queryResult.some(a => { return a.name === spot.name })
+          const found = queryResult.some(a => { return a.name === spot.name })
           if(!found) { queryResult.push(spot) }
         }
       })
@@ -78,6 +78,11 @@ class SpotListView extends React.Component {
       </div>
     );
   }
+}
+
+SpotListView.propTypes = {
+  spots: React.PropTypes.array.isRequired,
+  filteredSpots: React.PropTypes.array.isRequired
 }
 
 function mapStateToProps(state) {
