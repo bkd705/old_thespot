@@ -40,7 +40,15 @@ class SpotView extends React.Component {
                 src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${mapQuery}`}
                 allowFullScreen>
               </iframe>
-              <p style={{position: 'absolute', top: 125, left: 125, zIndex: '-1'}}>Loading Map...</p>
+              <div style={{position: 'absolute', top: 'calc(50% - 10px)', left: 'calc(50% - 10px)', zIndex: '-1'}}>
+                <div className="sk-wave">
+                  <div className="sk-rect sk-rect1"></div>
+                  <div className="sk-rect sk-rect2"></div>
+                  <div className="sk-rect sk-rect3"></div>
+                  <div className="sk-rect sk-rect4"></div>
+                  <div className="sk-rect sk-rect5"></div>
+                </div>
+              </div>
           </section>
         </div>
       </div>

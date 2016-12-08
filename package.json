@@ -38,6 +38,7 @@
     "redux-async-initial-state": "^0.2.0",
     "redux-thunk": "^2.1.0",
     "shortid": "^2.2.6",
+    "spinkit": "^1.2.5",
     "thunk": "^0.0.1",
     "validator": "^6.2.0"
   }
