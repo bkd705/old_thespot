@@ -31,15 +31,16 @@ class SpotView extends React.Component {
             <h6>Reviews</h6>
             <ReviewsContainer spotId={spot._id}/>
           </section>
-          <section className="spot__events grid-half">
+          <section className="spot__events grid-half" style={{position: 'relative'}}>
             <h6>Map</h6>
               <iframe
                 width="600"
                 height="450"
-                frameBorder="0" style={{border: 0}}
+                frameBorder="0" style={{border: 0, zIndex: 999}}
                 src={`https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${mapQuery}`}
                 allowFullScreen>
               </iframe>
+              <p style={{position: 'absolute', top: 125, left: 125, zIndex: '-1'}}>Loading Map...</p>
           </section>
         </div>
       </div>
