@@ -22,12 +22,12 @@ app.use(express.static(path.join(__dirname, 'public/')));
 
 const compiler = webpack(webpackConfig);
 
-app.use(webpackMiddleware(compiler));
-app.use(webpackHotMiddleware(compiler, {
-  hot: true,
-  publicPath: webpackConfig.output.publicPath,
-  noInfo: true
-}))
+// app.use(webpackMiddleware(compiler));
+// app.use(webpackHotMiddleware(compiler, {
+//   hot: true,
+//   publicPath: webpackConfig.output.publicPath,
+//   noInfo: true
+// }))
 
 //Database
 // mongoose.connect('mongodb://localhost/data/db/'); //local db
